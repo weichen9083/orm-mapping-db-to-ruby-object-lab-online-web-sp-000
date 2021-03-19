@@ -29,6 +29,9 @@ class Student
   end
   
   def self.new_from_db(row)
+    new = self.new 
+    new.id = row[]
+    
   end 
   
   
