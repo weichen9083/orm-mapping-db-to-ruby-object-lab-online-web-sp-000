@@ -39,9 +39,9 @@ class Student
   
   def self.find_by_name(name)
     sql = "select * from students where name = ? limit 1"
-    DB[:conn].execute(sql,name).map do |row|
-      self.new_from_db(row)
-    end
+    what  = DB[:conn].execute(sql,name)
+      self.new_from_db(what)
+    
   end 
   
   
