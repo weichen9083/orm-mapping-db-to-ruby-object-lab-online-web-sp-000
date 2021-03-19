@@ -69,7 +69,11 @@ def self.first_X_students_in_grade_10(x)
 end
 end 
 
-def self.
+def self.first_student_in_grade_10
+  sql = "select * from students where grade = 10"
+  self.new_from_db(DB[:conn].execute(sql)[0])
+  
+end 
 
   
   
